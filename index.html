@@ -101,14 +101,29 @@
             background-position: center 35%, center 35% !important;
             background-repeat: no-repeat, no-repeat !important;
         }
-        /* Hero text legibility over the photo (shadow only, background unchanged) */
-        .et_pb_section_0 .et_pb_text_inner,
-        .et_pb_section_0 .et_pb_text_inner * {
-            text-shadow: 0 1px 3px rgba(0,0,0,0.60), 0 0 2px rgba(0,0,0,0.40) !important;
-        }
+        /* Hero title: bright white with a soft shadow (background unchanged) */
         .et_pb_section_0 h1,
         .et_pb_section_0 h1 span {
-            text-shadow: 0 2px 6px rgba(0,0,0,0.65), 0 0 3px rgba(0,0,0,0.45) !important;
+            color: #ffffff !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.70), 0 0 3px rgba(0,0,0,0.50) !important;
+        }
+        /* Hero paragraphs: put them on a dark translucent panel so they're easy to read */
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner {
+            background: rgba(22,13,44,0.62) !important;
+            padding: 22px 26px !important;
+            border-radius: 16px !important;
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+        }
+        /* Force the silver body text to clear white (colored links keep their own color) */
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner,
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner p,
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner span:not([style*="color"]),
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner sup {
+            color: #ffffff !important;
+        }
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner * {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.55) !important;
         }
 
         /* Section spacing */
